@@ -26,7 +26,7 @@ namespace Excel_scanner
             {
                 SearchExcelFile(fileStreams[i], searchWords);
                 Console.Clear();
-                Console.WriteLine($"{(i+1/fileStreams.Count)*100}% completed");
+                Console.WriteLine($"{i} of {fileStreams.Count} completed");
             }
         }
 
