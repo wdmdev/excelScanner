@@ -24,9 +24,13 @@ namespace Excel_scanner
 
             for(var i = 0; i < fileStreams.Count; i++)
             {
-                SearchExcelFile(fileStreams[i], searchWords);
-                Console.Clear();
-                Console.WriteLine($"{i} of {fileStreams.Count} completed");
+                var stream = fileStreams[i];
+                if (stream != null)
+                {
+                    SearchExcelFile(stream, searchWords);
+                    Console.Clear();
+                    Console.WriteLine($"{i} of {fileStreams.Count} completed");
+                }
             }
         }
 
